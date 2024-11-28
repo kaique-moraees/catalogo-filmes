@@ -1,4 +1,5 @@
 package com.example.catalogofilmes.config;
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.cors.CorsConfiguration;
@@ -14,8 +15,8 @@ public class CorsConfig {
     @Bean
     public CorsFilter corsFilter() {
         CorsConfiguration corsConfiguration = new CorsConfiguration();
-        // Permite todas as origens
-        corsConfiguration.setAllowedOrigins(Arrays.asList("*"));
+        // Permite apenas o IP específico
+        corsConfiguration.setAllowedOrigins(Arrays.asList("http://44.197.150.115:3000"));
         // Permite todos os métodos HTTP
         corsConfiguration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS"));
         // Permite todos os cabeçalhos
