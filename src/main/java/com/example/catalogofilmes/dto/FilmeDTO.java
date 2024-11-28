@@ -89,7 +89,8 @@ public class FilmeDTO {
 
     // Método para converter String para LocalDate
     public static LocalDate parseDataLancamento(String dataLancamento) {
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+        // Corrigido para o formato "yyyy-MM-dd"
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
         return LocalDate.parse(dataLancamento, formatter);
     }
 }
